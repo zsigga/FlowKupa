@@ -9,6 +9,7 @@ RUN chown -R shiny:shiny /srv/shiny-server
 
 RUN R -e "install.packages('shiny', repos='https://cloud.r-project.org')"
 RUN R -e "install.packages('dplyr', repos='https://cloud.r-project.org')"
+RUN R -e "install.packages('shinyauthr', repos='https://cloud.r-project.org')"
 
 USER shiny
 
