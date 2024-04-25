@@ -8,10 +8,7 @@ COPY . /srv/shiny-server/
 RUN chown -R shiny:shiny /srv/shiny-server
 
 RUN R -e "install.packages('shiny', repos='https://cloud.r-project.org')"
-RUN R -e "install.packages('ggvis', repos='https://cloud.r-project.org')"
 RUN R -e "install.packages('dplyr', repos='https://cloud.r-project.org')"
-RUN R -e "install.packages('dbplyr', repos='https://cloud.r-project.org')"
-RUN R -e "install.packages('RSQLite', repos='https://cloud.r-project.org')"
 
 USER shiny
 
